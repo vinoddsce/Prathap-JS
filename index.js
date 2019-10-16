@@ -1,49 +1,77 @@
-console.log(a);
-var a;
-a = 100;
-console.log(a);
+// Arrays
 
 
+// Syntax:
+//  var arr_name  = [values saperated by comma]
 
+var numbers = [10, 43, 11, 97, 3, 85, -23, 0, -9];
+// console.log(this);
 
-// Functions
+// var lastName = "Unknow";
 
-// Syntax
-// function function_name(optional parameters_list) {
-// .. statements
+// function display() {
+//     var lastName = "User";
+//     console.log(lastName);
 // }
+// display();
+
+// console.log(display);
 
 
+var person = {
+    firstName: "Vinod",
+    lastName: "Kumar",
+    yearOfBirth: 1990,
+    isMarried: false,
 
-sayHi();
-// displayHi();
+    displayFullName: function () {
+        console.log(this);
+        console.log(this.firstName + person.lastName);
+    },
 
-function sayHi() {
-    console.log("Hi");
+    calculateAge: function (currentYear) {
+        // return currentYear - this.yearOfBirth;
+        return getAge(currentYear);
+
+        function getAge(year) {
+            return year - this.yearOfBirth;
+        }
+
+
+    }
 }
 
-// sayHi();
+var yearOfBirth = 2000;
+
+// window.person.displayFullName();
+// person.displayFullName();
+
+console.log(person.calculateAge(2019));
 
 
-// function sayHi(fName, lName) {
-//     console.log("Hi", fName, lName);
+
+
+
+// var a = 10;
+
+// function A() {
+//     var a = 100;
+//     function B() {
+//         var b = 200;
+//         var a = 300;
+//         function C() {
+//             var c = 22;
+//             console.log("a: ", a);
+//             console.log("b: ", b);
+//             console.log("c: ", c);
+//         }
+//         C();
+//     }
+//     B();
 // }
 
-// sayHi("Vinod", "Kumar");
-// console.log(sayHi);
+// A();
 
 
 
-var displayHi = function () {
-    console.log("Displaying Hi");
-}
-
-displayHi();
-console.log(displayHi.);
-
-
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We’re thrilled to announce support for a new set of scenarios! <a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> and the <a href="https://twitter.com/hashtag/Linux?src=hash&amp;ref_src=twsrc%5Etfw">#Linux</a> Consumption hosting plan are now Generally Available - and the Premium plan now supports Linux and custom containers. Learn more: <a href="https://t.co/fdqujXW4Bi">https://t.co/fdqujXW4Bi</a> <a href="https://t.co/nzoF49tNI2">pic.twitter.com/nzoF49tNI2</a></p>&mdash; Azure Functions (@AzureFunctions) <a href="https://twitter.com/AzureFunctions/status/1163511532417765376?ref_src=twsrc%5Etfw">August 19, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
+// Higher Order Function
