@@ -75,3 +75,63 @@ console.log(person.calculateAge(2019));
 
 
 // Higher Order Function
+// HOF is a function which return another function 
+// OR which accecpt another function as parameter 
+// OR Both.
+
+
+// function main(fn) {
+//     fn();
+// }
+
+
+// function sayHi() {
+//     console.log("Hi");
+// }
+
+// main(sayHi);
+
+
+
+function first() {
+    return function inner() {
+        console.log("inner function");
+    }
+}
+
+// var inner = first();
+// inner();
+
+// first()();
+
+
+function mathLib(type) {
+
+    // Closures
+    const PI = 3.14;
+
+    if (type === "add") {
+        return function add(a, b) {
+            return a + b;
+        }
+    }
+
+    if (type === "sq") {
+        return function sq(a) {
+            return a * a;
+        }
+    }
+
+    return function multiplyWithPI(a) {
+        return a * PI;
+    }
+}
+
+var add = mathLib("add");
+console.log(add);
+var sum = add(100, 200);
+console.log("Sum: ", sum);
+var sq = mathLib("sq");
+console.log(sq);
+var mulPi = mathLib("");
+console.log(mulPi);
