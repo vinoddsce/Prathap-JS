@@ -31,14 +31,17 @@ var person = {
 
     calculateAge: function (currentYear) {
         // return currentYear - this.yearOfBirth;
-        return getAge(currentYear);
-
-        function getAge(year) {
+        var getAge = (year) => {
+            console.log(this);
             return year - this.yearOfBirth;
         }
-
+        // function getAge(year) {
+        //     return year - this.yearOfBirth;
+        // }
+        return getAge(currentYear);
 
     }
+
 }
 
 var yearOfBirth = 2000;
@@ -49,6 +52,17 @@ var yearOfBirth = 2000;
 console.log(person.calculateAge(2019));
 
 
+
+// Arrow Function - Used to resolve this key word issue. 
+
+
+// var name = () => {
+// }
+
+var sayHiArr = (name) => {
+    console.log("Say Hi From Arrow Function !!!!!", name, this);
+}
+sayHiArr("Vinod");
 
 
 
