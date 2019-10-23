@@ -39,9 +39,7 @@ var person = {
         //     return year - this.yearOfBirth;
         // }
         return getAge(currentYear);
-
     }
-
 }
 
 var yearOfBirth = 2000;
